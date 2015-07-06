@@ -1,9 +1,7 @@
 (function(global) {
   "use strict";
 
-  if (typeof global.APP === 'undefined') {
-    global.APP = {};
-  }
+  global.APP.namespace('APP.csvUtils');
 
   //-------------------
   // csvUtils

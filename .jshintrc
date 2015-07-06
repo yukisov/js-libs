@@ -7,11 +7,13 @@
   "browser" : true,
   "devel" : true,
   "globals": {
+    "global": false,
     "require": false,
     "module": false,
     "describe": false,
     "it": false,
-    "beforeEach": false
+    "beforeEach": false,
+    "expect": false
   },
   "multistr": true
 }
