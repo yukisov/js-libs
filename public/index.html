@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test</title>
+    <link media="all" type="text/css" rel="stylesheet" href="./external-libs/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./external-libs/css/mocha.css" />
+
+</head>
+<body>
+  <div id="mocha"></div>
+  <!-- External libraries -->
+  <script type="text/javascript" src="./external-libs/js/underscore-min.js"></script>
+  <script type="text/javascript" src="./external-libs/js/jquery.min.js"></script>
+  <script type="text/javascript" src="./external-libs/js/promise-6.1.0.js"></script>
+  <script type="text/javascript" src="./external-libs/js/mocha.js"></script>
+  <script type="text/javascript" src="./external-libs/js/chai.js"></script>
+  <script type="text/javascript">
+    var expect = chai.expect;
+    mocha.setup({ ui: 'bdd' });
+    //mocha.setup({
+    //  ui: 'bdd',
+    //  ignoreLeaks: true,
+    //  asyncOnly: false
+    //});
+  </script>
+  <!-- Add my-libs js files here -->
+  <script type="text/javascript" src="my-libs/utils.js"></script>
+  <script type="text/javascript" src="my-libs/csv_utils.js"></script>
+  <!-- Add my-test js files here -->
+  <script type="text/javascript" src="my-test/utilsTest.js"></script>
+  <script type="text/javascript" src="my-test/csvUtilsTest.js"></script>
+  <script>
+    mocha.checkLeaks();
+    mocha.globals(['jQuery']);
+    //mocha.grep('internal functions');
+    mocha.run();
+  </script>
+</body>
+</html>
+
