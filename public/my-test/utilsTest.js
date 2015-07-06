@@ -67,6 +67,23 @@
         expect(utils.getUrlParams('name')).to.deep.equal({});
       });
     });
+
+    describe('isArray', function() {
+      it ('should check if an argument is Array or not rightly', function() {
+
+        expect(utils.isArray([])).to.equal(true);
+        expect(utils.isArray([1, 2])).to.equal(true);
+        expect(utils.isArray(['a', 'b'])).to.equal(true);
+        expect(utils.isArray({})).to.equal(false);
+        expect(utils.isArray(1)).to.equal(false);
+        expect(utils.isArray(1.1)).to.equal(false);
+        expect(utils.isArray("Hello")).to.equal(false);
+        expect(utils.isArray(function(){})).to.equal(false);
+        expect(utils.isArray(/foo/)).to.equal(false);
+
+      });
+    });
+
   });
 
 })((typeof window === 'object' && window) || global);

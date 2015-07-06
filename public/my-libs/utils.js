@@ -160,13 +160,33 @@
       return d;
     };
 
+    /**
+     * 配列かどうかを返す。
+     * @param something
+     * @returns {boolean}
+     */
+    var isArray = function (something) {
+
+      // ----- polyfil する場合 -----
+      // if(!Array.isArray) {
+      //   Array.isArray = function (vArg) {
+      //     return Object.prototype.toString.call(vArg) === "[object Array]";
+      //   };
+      // }
+      // ---------------------------
+
+      return Object.prototype.toString.call(something) === '[object Array]';
+
+    };
+
     return {
       waitOnload: waitOnload,
       fixedEncodeURIComponent: fixedEncodeURIComponent,
       addDigitGroupingSeparator: addDigitGroupingSeparator,
       add: add,
       getUrlParams: getUrlParams,
-      multiply: multiply
+      multiply: multiply,
+      isArray: isArray
     };
 
   })(global);
