@@ -13,7 +13,9 @@
     "describe": false,
     "it": false,
     "beforeEach": false,
-    "expect": false
+    "expect": false,
+    "$": false,
+    "Promise": false
   },
   "multistr": true
 }

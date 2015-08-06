@@ -7,7 +7,7 @@
 
   global.app.namespace = function (ns_string) {
     var parts = ns_string.split('.'),
-        parent = app,
+        parent = global.app,
         i;
 
     // Remove redundant global on top
