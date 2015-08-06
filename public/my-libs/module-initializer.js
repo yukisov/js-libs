@@ -1,21 +1,28 @@
-var app = app || {};
+(function(global) {
+  "use strict";
 
-app.namespace = function (ns_string) {
-  var parts = ns_string.split('.'),
-      parent = app,
-      i;
-
-  // Remove redundant global on top
-  if (parts[0] === "app") {
-    parts = parts.slice(1);
+  if (typeof global.app === 'undefined') {
+    global.app = {};
   }
 
-  for (i = 0; i < parts.length; i += 1) {
-    // Create property if not exist
-    if (typeof parent[parts[i]] === 'undefined') {
-      parent[parts[i]] = {};
+  global.app.namespace = function (ns_string) {
+    var parts = ns_string.split('.'),
+        parent = app,
+        i;
+
+    // Remove redundant global on top
+    if (parts[0] === "app") {
+      parts = parts.slice(1);
     }
-    parent = parent[parts[i]];
-  }
-  return parent;
-};
+
+    for (i = 0; i < parts.length; i += 1) {
+      // Create property if not exist
+      if (typeof parent[parts[i]] === 'undefined') {
+        parent[parts[i]] = {};
+      }
+      parent = parent[parts[i]];
+    }
+    return parent;
+  };
+
+})((typeof window === 'object' && window) || global);

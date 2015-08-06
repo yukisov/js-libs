@@ -1,8 +1,7 @@
 (function(global) {
   "use strict";
 
-  var app = global.app,
-      utils = app.utils;
+  var utils = global.app.utils;
 
   describe('Utils', function(){
 

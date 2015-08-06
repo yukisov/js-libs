@@ -1,7 +1,7 @@
 (function(global) {
   "use strict";
 
-  global.app.namespace('app.utils');
+  //global.app.namespace('app.utils');
 
   //---------------------
   // utils
