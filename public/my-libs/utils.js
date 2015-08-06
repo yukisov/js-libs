@@ -1,12 +1,12 @@
 (function(global) {
   "use strict";
 
-  global.APP.namespace('APP.utils');
+  global.app.namespace('app.utils');
 
   //---------------------
   // utils
   //---------------------
-  global.APP.utils = (function (/*global*/) {
+  global.app.utils = (function (/*global*/) {
 
     /**
      * @returns {Promise}

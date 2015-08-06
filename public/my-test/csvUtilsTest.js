@@ -1,7 +1,7 @@
 (function(global) {
   "use strict";
 
-  var csvUtils = global.APP.csvUtils;
+  var csvUtils = global.app.csvUtils;
 
   describe('csv_utils', function(){
 

@@ -1,12 +1,12 @@
-var APP = APP || {};
+var app = app || {};
 
-APP.namespace = function (ns_string) {
+app.namespace = function (ns_string) {
   var parts = ns_string.split('.'),
-      parent = APP,
+      parent = app,
       i;
 
   // Remove redundant global on top
-  if (parts[0] === "APP") {
+  if (parts[0] === "app") {
     parts = parts.slice(1);
   }
 

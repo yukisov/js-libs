@@ -1,12 +1,12 @@
 (function(global) {
   "use strict";
 
-  global.APP.namespace('APP.csvUtils');
+  global.app.namespace('app.csvUtils');
 
   //-------------------
   // csvUtils
   //-------------------
-  global.APP.csvUtils = (function (/*global*/) {
+  global.app.csvUtils = (function (/*global*/) {
 
     /**
      * Convert CSV string into Array
