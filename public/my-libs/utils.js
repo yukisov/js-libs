@@ -179,6 +179,20 @@
 
     };
 
+    /**
+     * クライアントが日本語かどうかを返す。
+     * @returns {boolean}
+     */
+    var isLangJa = function(lang) {
+      if (typeof lang === 'undefined') {
+        lang = window.navigator.userLanguage || window.navigator.language || window.navigator.browserLanguage;
+      }
+      if (typeof lang === 'undefined') {
+        return true;
+      }
+      return lang.substr(0, 2) === 'ja';
+    };
+
     return {
       waitOnload: waitOnload,
       fixedEncodeURIComponent: fixedEncodeURIComponent,
@@ -186,7 +200,8 @@
       add: add,
       getUrlParams: getUrlParams,
       multiply: multiply,
-      isArray: isArray
+      isArray: isArray,
+      isLangJa: isLangJa
     };
 
   })(global);

@@ -83,6 +83,18 @@
       });
     });
 
+    describe('isLangJa', function() {
+      it ('should check if language is japanese or not rightly', function() {
+
+        expect(utils.isLangJa()).to.equal(true);
+        expect(utils.isLangJa('')).to.equal(false);
+        expect(utils.isLangJa('ja')).to.equal(true);
+        expect(utils.isLangJa('en')).to.equal(false);
+        expect(utils.isLangJa('foo')).to.equal(false);
+
+      });
+    });
+
   });
 
 })((typeof window === 'object' && window) || global);
